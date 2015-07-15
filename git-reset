@@ -1,0 +1,3 @@
+cd ~/source/linux/linux-pdx86/
+git reset --hard origin
+rm -f ~/incoming/*

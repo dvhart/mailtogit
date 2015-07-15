@@ -1,0 +1,27 @@
+These scripts were inspired, and largely copied, from Luis Rodriguez's blog
+post:
+
+http://www.do-not-panic.com/2014/07/applying-patches-from-mutt-onto-git.html
+(Be sure to view the source if you read the muttrc or the <> commands will be
+hidden as html tags)
+
+Which was itself inspired from Ben Hutchings earlier blog:
+
+http://flavioleitner.blogspot.com/2011/03/patch-workflow-with-mutt-and-git.html
+
+To use:
+
+Edit the hardcoded project path in the scripts (~/source/linux/linux-pdx86) to
+your preferred location. This is where "git am" and "scripts/checkpatch" will be
+run from.
+
+$ cp * ~/bin/mutt/
+$ mkdir ~/incoming
+$ cat muttrc >> ~/.muttrc
+
+Dependencies:
+- git
+- procmail
+- formail
+- mutt
+(at least)

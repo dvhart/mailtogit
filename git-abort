@@ -1,0 +1,3 @@
+cd ~/source/linux/linux-pdx86
+git am --abort
+rm -f ~/incoming/*

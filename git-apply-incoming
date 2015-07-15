@@ -1,0 +1,2 @@
+cd ~/source/linux/linux-pdx86/
+git am -s ~/incoming/*.mbox

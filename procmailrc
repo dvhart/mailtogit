@@ -1,0 +1,9 @@
+SHELL=/bin/bash
+VERBOSE=off
+MAILDIR=$HOME/incoming/
+LOGFILE=$HOME/incoming/.procmaillog
+
+:0
+`formail -xSubject: | sed -e '{ s/Subject: //; s@\[@@g; s@\]@@g; s@[()]@_@g;
+s@[/:]@-@g; s@"@_@g; s@^ \+@@; s@\.\.@.@g; s@ \+@_@g; s@-_@_@g; s@__@_@g;
+s@\.$@@; }'`.mbox

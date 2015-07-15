@@ -1,0 +1,12 @@
+# Macros for managing patches
+macro index (t '<tag-prefix><pipe-entry>~/bin/mutt/mail-to-mbox<return>'  "Dumps tagged patches into ~/incoming/*.mbox"
+macro index (a '<tag-prefix><pipe-entry>~/bin/mutt/git-apply-incoming<return>'  "git am ~/incoming/*.mbox"
+macro index (g '<tag-prefix><pipe-entry>~/bin/mutt/git-apply<return>'  "git am tagged patches"
+macro index (c '<pipe-entry>~/bin/mutt/checkpatch<return>' "Run checkpatch on ~/incoming/*"
+macro index (r '<pipe-entry>rm -f ~/incoming/*.mbox<return>'  "Nukes all ~/incoming/"
+macro index (l '<pipe-entry>ls -ltr ~/incoming/<return>'  "ls -l ~/incoming/"
+macro index ,t '<pipe-entry>~/bin/mutt/mail-to-mbox<return>'  "Dumps currently viewed patch into ~/incoming/*.mbox"
+macro index ,g '<pipe-entry>~/bin/mutt/git-apply<return>' "git am currently viewed patch"
+macro index ,a '<pipe-entry>~/bin/mutt/git-abort<return>' "git am --abort"
+macro index ,r '<pipe-entry>~/bin/mutt/git-reset<return>' "git-reset --hard origin"
+
